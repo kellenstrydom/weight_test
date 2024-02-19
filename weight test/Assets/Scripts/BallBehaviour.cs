@@ -82,7 +82,7 @@ public class BallBehaviour : MonoBehaviour
 
         if (moveDir == 0f && isGrounded)
         {
-            rb.drag = 5;
+            rb.velocity -= Vector2.right * (rb.velocity.x * 5 * Time.deltaTime);
         }
         else
         {
@@ -90,8 +90,8 @@ public class BallBehaviour : MonoBehaviour
         }
         rb.AddForce(Vector2.right * (moveDir * moveForce * modes[(int)mode].forceMultiplier),ForceMode2D.Force);
 
-        if (rb.velocity.x > modes[(int)mode].maxSpeed) 
-            rb.velocity = rb.velocity * Vector2.up + modes[(int)mode].maxSpeed *Vector2.right;
+        if (Math.Abs(rb.velocity.x) > modes[(int)mode].maxSpeed) 
+            rb.velocity = rb.velocity * Vector2.up + Vector2.right * (modes[(int)mode].maxSpeed * math.sign(rb.velocity.x));
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
