@@ -932,19 +932,21 @@ MonoBehaviour:
 
     Movement: A and D (L arrow and R arrow)
 
+    jump: space
+    bar
 
-    Switching
-    weight: 1, 2, and 3
+
+    Switching weight: 1, 2, and 3
 
     1 - small
 
     2 - medium
 
-    3 - large
+    3
+    - large
 
 
-    pause
-    and reset: Esc'
+    pause and reset: Esc'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
