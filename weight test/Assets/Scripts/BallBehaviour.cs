@@ -78,7 +78,7 @@ public class BallBehaviour : MonoBehaviour
 
     void Movement()
     {
-        float moveDir = Input.GetAxis("Horizontal");
+        float moveDir = Input.GetAxisRaw("Horizontal");
 
         if (moveDir == 0f && isGrounded)
         {
